@@ -87,8 +87,10 @@ class Controller
                 array_push($task_arr['data'], $task_item);
             }
             $toJSON = json_encode($task_arr);
+            echo json_encode($task_arr);
         } else {
             $toJSON = json_encode(array('message' => 'No task found'));
+            echo json_encode(array('message' => 'No task found'));
         }
         return $toJSON;
     }
